@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+input, button {
+    border: 1px solid black;
+    border-radius: .2rem;
+    padding: .5rem;
+}
+
+.container {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+li {
+    border-bottom: 1px solid black;
+    list-style: none;
+    padding: .5rem;
+}
+
+.done {
+    text-decoration: line-through;
+}
