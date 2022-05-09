@@ -2,10 +2,7 @@ const app = new Vue(
     {
         el: '#root',
         data: {
-            newToDo: {
-                text: '',
-                done: false
-            },
+            text: '',
             toDoList: [
                 {
                     text: 'Portare fuori cane',
@@ -31,9 +28,15 @@ const app = new Vue(
                 console.log(index);
             },
             addToDoElement: function() {
-                this.toDoList.push(this.newToDo);
-                // this.newToDo.text= '';
-                console.log(this.newToDo);
+                if (this.text.length > 0) {
+                    const newToDo = {
+                        text: this.text, 
+                        done: false
+                    };
+    
+                    this.toDoList.push(newToDo);
+                    this.text = '';
+                }
             }
         }
     }
