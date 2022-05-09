@@ -19,7 +19,8 @@
                 <li 
                 v-for="(item, index) in toDoList"
                 :class="{done: item.done === true}">
-                {{item.text}}
+                    <span class="to-do-text">{{item.text}}</span>
+                    <span class="cross" @click="removeToDo(index)">X</span>
                 </li>
             </ul>
         </div>

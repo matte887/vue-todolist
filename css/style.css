@@ -19,6 +19,16 @@ li {
     border-bottom: 1px solid black;
     list-style: none;
     padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+li .to-do-text {
+    flex-grow: 1;
+}
+
+li .cross {
+    cursor: pointer;
 }
 
 .done {
