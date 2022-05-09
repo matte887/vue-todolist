@@ -12,8 +12,13 @@
     <div id="root">
         <div class="container">
             <div>
-                <input type="text" placeholder="To do...">
-                <button>Add</button>
+                <input 
+                type="text"
+                placeholder="To do..."
+                v-model="newToDo.text"
+                @keyup.enter="addToDoElement">
+                
+                <button @click="addToDoElement">Add</button>
             </div>
             <ul>
                 <li 
