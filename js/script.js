@@ -39,7 +39,6 @@ const app = new Vue(
             },
             taskDone: function(index) {
                 const thisTask = this.toDoList[index];
-                console.log(thisTask);
                 if (thisTask.done) {
                     thisTask.done = false;
                 } else {
