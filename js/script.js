@@ -25,7 +25,6 @@ const app = new Vue(
         methods: {
             removeToDo: function(index) {
                 this.toDoList.splice(index, 1);
-                console.log(index);
             },
             addToDoElement: function() {
                 if (this.text.length > 0) {
@@ -37,6 +36,15 @@ const app = new Vue(
                     this.toDoList.push(newToDo);
                     this.text = '';
                 }
+            },
+            taskDone: function(index) {
+                const thisTask = this.toDoList[index];
+                console.log(thisTask);
+                if (thisTask.done) {
+                    thisTask.done = false;
+                } else {
+                    thisTask.done = true;
+                }                
             }
         }
     }

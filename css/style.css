@@ -27,7 +27,8 @@ li .to-do-text {
     flex-grow: 1;
 }
 
-li .cross {
+li .cross,
+li .to-do-text {
     cursor: pointer;
 }
 

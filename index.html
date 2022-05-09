@@ -21,10 +21,13 @@
                 <button @click="addToDoElement">Add</button>
             </div>
             <ul>
-                <li 
-                v-for="(item, index) in toDoList"
-                :class="{done: item.done === true}">
-                    <span class="to-do-text">{{item.text}}</span>
+                <li v-for="(item, index) in toDoList">
+                    <span 
+                    class="to-do-text"
+                    @click="taskDone(index)"
+                    :class="{done: item.done === true}">
+                        {{item.text}}
+                    </span>
                     <span class="cross" @click="removeToDo(index)">X</span>
                 </li>
             </ul>
